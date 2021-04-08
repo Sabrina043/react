@@ -1,7 +1,8 @@
 import React from "react";
 import './App.css';
 import Box from "./components/Box.jsx"
-// import global from "../styles/global.css"
+import "../styles/global.css"
+
 
 const tempMin = -20
 const tempMax = 40
@@ -14,19 +15,22 @@ class App extends React.Component {
   render() {
     return (
       <div className= "container-fluid">
-
+ 
         <div className= "row">
+
+      
+
      {/*water  */}
       <Box icon = "local_drink" color = {'#3A85FF'} value = {1.5} unit = "L"></Box>
 
       {/*Steps */}
-      <Box icon = "directon_walk" color = {'#3A85FF'} value = {1.5} unit = "L"></Box>
+      <Box icon = "directions_walk" color = {'black'} value = {3000} unit = "steps"></Box>
 
       {/* Heart*/}
-      <Box icon = "directon_walk" color = {'#3A85FF'} value = {1.5} unit = "L"></Box>
+      <Box icon = "favorite" color = {'red'} value = {120} unit = "bpm"></Box>
 
       {/* Temperature */}
-      <Box icon = "directon_walk" color = {'#3A85FF'} value = {1.5} unit = "L"></Box>
+      <Box icon = "wb_sunny" color = {'yellow'} value = {-10} unit = "°C"></Box>
 
 
         <p>Heart : {heartMin}</p>

@@ -1,7 +1,5 @@
 import React from "react";
-import './App.css';
-import directions_walk from "../elsy/src/components/directions_walk_black_24dp(1).svg";
-import {App} from '../elsy/src/components/App.js';
+
 
 // import  Child  from "Child";
 
@@ -11,7 +9,11 @@ class steps extends React.Component {
     return (
       <div className="box" className="col-sm-3" className="col-6">
 
-        <img src="directions_walk_black_24dp(1).svg" alt="direction walk"/> 
+
+        <span class="material-icons"x style={{fontSize: 100, color: this.props.color }}>
+        {this.props.icon}
+        </span>
+        <p>{this.props.value} {this.props.unit}</p>
 
       </div>
     );

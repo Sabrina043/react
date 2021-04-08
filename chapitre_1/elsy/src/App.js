@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
-import directions_walk from "..elsy/src/components/directions_walk_black_24dp(1).svg";
-// import { Child } from "Child.js";
+import Box from "./components/Box.jsx"
+// import global from "../styles/global.css"
 
 const tempMin = -20
 const tempMax = 40
@@ -15,7 +15,19 @@ class App extends React.Component {
     return (
       <div className= "container-fluid">
 
-        <div className= "row-Steps">
+        <div className= "row">
+     {/*water  */}
+      <Box icon = "local_drink" color = {'#3A85FF'} value = {1.5} unit = "L"></Box>
+
+      {/*Steps */}
+      <Box icon = "directon_walk" color = {'#3A85FF'} value = {1.5} unit = "L"></Box>
+
+      {/* Heart*/}
+      <Box icon = "directon_walk" color = {'#3A85FF'} value = {1.5} unit = "L"></Box>
+
+      {/* Temperature */}
+      <Box icon = "directon_walk" color = {'#3A85FF'} value = {1.5} unit = "L"></Box>
+
 
         <p>Heart : {heartMin}</p>
         <p>Temperature : {tempMin}</p>

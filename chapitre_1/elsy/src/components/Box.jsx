@@ -4,13 +4,11 @@ import React from "react";
 // import  Child  from "Child";
 
 
-class steps extends React.Component {
+class Box extends React.Component {
   render() {
     return (
-      <div className="box" className="col-sm-3" className="col-6">
-
-
-        <span class="material-icons"x style={{fontSize: 100, color: this.props.color }}>
+      <div className="box col-sm-3 col-6">
+        <span class="material-icons" style={{fontSize: 100, color: this.props.color }}>
         {this.props.icon}
         </span>
         <p>{this.props.value} {this.props.unit}</p>
@@ -20,4 +18,4 @@ class steps extends React.Component {
   }
 }
 
-export default steps;
+export default Box;

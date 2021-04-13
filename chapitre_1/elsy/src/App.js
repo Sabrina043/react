@@ -27,28 +27,9 @@ class App extends React.Component {
 
       };
 
-      this.boxFunction = this.boxFunction.bind(this)
+      this.render = this.render.bind(this)
   };
 
-
-  boxFunction(e) {
-    // console.log("boxFunction target", e.target);
-    // console.log("boxFunction (si l'attribut existe dans le target. pas le cas pour un button par exemple)" ,e.target.type);
-    // console.log("boxFunction value", e.target.value);
-
-    if (e.target.type === "Heart") {
-        this.setState({
-            Heart: e.target.value
-        })
-    } else if (e.target.id === "Heart") {
-        this.setState({
-            Heart: e.target.value
-        })
-    };
-
-};
-
-  
   render() {
     return (
       <div className= "container-fluid">
@@ -58,16 +39,16 @@ class App extends React.Component {
       
 
      {/*water  */}
-      <Box icon = "local_drink" color = {'#3A85FF'} value = {1.5} unit = "L"></Box>
+      <Box icon = "local_drink" color = {'#3A85FF'} value = {this.state.water} unit = "L"></Box>
 
       {/*Steps */}
-      <Box icon = "directions_walk" color = 'black' value = {3000} unit = "steps"></Box>
+      <Box icon = "directions_walk" color = 'black' value = {this.state.steps} unit = "steps"  min = {stepMin} max= {stepMax} iconChange={this.changeIcon}></Box>
 
       {/* Heart*/}
-      <Box icon = "favorite" color = 'red' value = {120} unit = "bpm"></Box>
+      <Box icon = "favorite" color = 'red' value = {this.state.heart} unit = "bpm" min = {heartMin} max= {heartMax} heartChange= {this.changeHeart} ></Box>
 
       {/* Temperature */}
-      <Box icon = "wb_sunny" color = 'yellow' value = {-10} unit = "°C"></Box>
+      <Box icon = "wb_sunny" color = 'yellow' value = {this.state.temperature} unit = "°C" min = {tempMin} max= {tempMax} sunnyChange={this.changeTemp} ></Box>
 
        
 

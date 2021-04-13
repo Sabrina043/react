@@ -7,7 +7,12 @@ import React from "react";
 class Box extends React.Component {
 
   render() {
-    return (
+
+    const {color, unit, value, min, max, icon, onChange} = this.props
+
+    if (icon !== "local_drink")
+
+ return (
       <div className="box col-sm-3 col-6">
         <span class="material-icons" style={{fontSize: 100, color: this.props.color }}>
         {this.props.icon}

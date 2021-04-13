@@ -5,34 +5,62 @@ import React from "react";
 
 
 class Box extends React.Component {
+  renderHeart() {
+    if (this.props.unit === "bpm") {
+      return (<input type="range"
+        min={this.props.heartMin}
+        max={this.props.heartMax}
+        value={this.props.heart}
+        onChange={this.props.onHeartChange} />)
+    }
+  }
+  renderStep() {
+    if (this.props.unit === "steps") {
+      return (<input type="range"
+        min={this.props.steptMin}
+        max={this.props.stepMax}
+        value={this.props.steps}
+        onChange={this.props.onStepsChange} />)
+    }
+  }
+  renderTemperature() {
+    if (this.props.unit === "°C") {
+      return (<input type="range"
+        min={this.props.temperatureMin}
+        max={this.props.temperatureMax}
+        value={this.props.temperature}
+        onChange={this.props.onTemperatureChange} />)
+    }
+  }
+
+
 
   render() {
 
-    const { color, unit, value, min, max, icon, onChange } = this.props
+    return (
 
-    if (icon !== "local_drink")
+      <div className="box col-sm-3 col-6">
 
-      return (
-        <div className="box col-sm-3 col-6">
-          <span class="material-icons" style={{ fontSize: 100, color: this.props.color }}>
-            {this.props.icon}
-          </span>
-          <p>{this.props.value} {this.props.unit}</p>
+        <span className="material-icons" style={{ fontSize: 100, color: this.props.color }}>
+          {this.props.icon}
 
-          <div className = "row">
+        </span>
+        <p>{this.props.value} {this.props.unit} </p>
+        {this.renderHeart()}
+        {this.renderStep()}
+        {this.renderTemperature()}
 
-            <div className = "col">
 
-            <input type="range" min={min} max={max} value="" onInput={onChange} />
+      </div>
 
-            </div>
 
-          </div>
 
-        </div>
+    )
 
-      )
+
+
   }
-}
 
-export default Box;
+
+
+} export default Box;

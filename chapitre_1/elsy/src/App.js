@@ -16,41 +16,41 @@ class App extends React.Component {
 
   constructor() {
 
-      super()
+    super()
 
-      this.state= {
+    this.state = {
 
-        Water: 0,
-        Heart: 120,
-        Temperature: -10,
-        Steps: 3000
+      Water: 0,
+      Heart: 120,
+      Temperature: -10,
+      Steps: 3000
 
-      };
+    };
 
-      this.render = this.render.bind(this)
+    // this.Box = this.Box.bind(this)
   };
 
   render() {
     return (
-      <div className= "container-fluid">
- 
-        <div className= "row">
+      <div className="container-fluid">
 
-      
+        <div className="row">
 
-     {/*water  */}
-      <Box icon = "local_drink" color = {'#3A85FF'} value = {this.state.water} unit = "L"></Box>
 
-      {/*Steps */}
-      <Box icon = "directions_walk" color = 'black' value = {this.state.steps} unit = "steps"  min = {stepMin} max= {stepMax} iconChange={this.changeIcon}></Box>
 
-      {/* Heart*/}
-      <Box icon = "favorite" color = 'red' value = {this.state.heart} unit = "bpm" min = {heartMin} max= {heartMax} heartChange= {this.changeHeart} ></Box>
+          {/*water  */}
+          <Box icon="local_drink" color={'#3A85FF'} value={this.state.water} unit="L"></Box>
 
-      {/* Temperature */}
-      <Box icon = "wb_sunny" color = 'yellow' value = {this.state.temperature} unit = "°C" min = {tempMin} max= {tempMax} sunnyChange={this.changeTemp} ></Box>
+          {/*Steps */}
+          <Box icon="directions_walk" color='black' value={this.state.steps} unit="steps" min={stepMin} max={stepMax} iconChange={this.changeIcon}></Box>
 
-       
+          {/* Heart*/}
+          <Box icon="favorite" color='red' value={this.state.heart} unit="bpm" min={heartMin} max={heartMax} heartChange={this.changeHeart} ></Box>
+
+          {/* Temperature */}
+          <Box icon="wb_sunny" color='yellow' value={this.state.temperature} unit="°C" min={tempMin} max={tempMax} sunnyChange={this.changeTemp} ></Box>
+
+
 
         </div>
       </div>

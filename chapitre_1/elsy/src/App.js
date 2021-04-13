@@ -4,6 +4,7 @@ import Box from "./components/Box.jsx";
 import "./styles/global.css";
 
 
+
 const tempMin = -20
 const tempMax = 40
 const heartMin = 80
@@ -12,6 +13,40 @@ const stepMin = 0
 const stepMax = 50000
 
 class App extends React.Component {
+
+  constructor() {
+
+      super()
+
+      this.state= {
+
+        Water: 0,
+        Heart: 120,
+        Temperature: -10,
+        Steps: 3000
+
+      };
+
+      this.boxFunction = this.boxFunction.bind(this)
+  };
+
+
+  boxFunction(e) {
+    // console.log("boxFunction target", e.target);
+    // console.log("boxFunction (si l'attribut existe dans le target. pas le cas pour un button par exemple)" ,e.target.type);
+    // console.log("boxFunction value", e.target.value);
+
+    if (e.target.type === "Heart") {
+        this.setState({
+            Heart: e.target.value
+        })
+    } else if (e.target.id === "Heart") {
+        this.setState({
+            Heart: e.target.value
+        })
+    };
+
+};
 
   
   render() {
@@ -34,10 +69,7 @@ class App extends React.Component {
       {/* Temperature */}
       <Box icon = "wb_sunny" color = 'yellow' value = {-10} unit = "°C"></Box>
 
-
-        <p>Heart : {heartMin}</p>
-        <p>Temperature : {tempMin}</p>
-        <p>Steps : {stepMin}</p>
+       
 
         </div>
       </div>

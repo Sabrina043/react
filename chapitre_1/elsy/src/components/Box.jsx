@@ -1,9 +1,6 @@
 import React from "react";
 
 
-
-
-
 class Box extends React.Component {
   renderHeart() {
     if (this.props.unit === "bpm") {
@@ -26,8 +23,8 @@ class Box extends React.Component {
   renderTemperature() {
     if (this.props.unit === "°C") {
       return (<input type="range"
-        min={this.props.temperatureMin}
-        max={this.props.temperatureMax}
+        min={this.props.tempMin}
+        max={this.props.tempMax}
         value={this.props.temperature}
         onChange={this.props.onTemperatureChange} />)
     }

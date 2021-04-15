@@ -16,8 +16,6 @@ class App extends React.Component {
     this.state = {
 
       activeTab: "Add", 
-      activeTab: "Pay" ,
-      activeTab: "list",
       items: []
 
     }
@@ -29,10 +27,10 @@ class App extends React.Component {
     
     return (
       <div>
-        <Button children= {Add} isSelected= {activeTab} onClick={3} ></Button>
-        <Button children= {List} isSelected= {activeTab} onClick={} ></Button>
-        <Button children= {Pay} isSelected= {activeTab} onClick={} ></Button>
-        
+        <button type="button" class="btn btn-outline-primary" isSelected= {this.state.activTab} onClick={this.state.items} >add</button>
+        <button type="button" class="btn btn-outline-primary" isSelected= {this.state.activTab} onClick={this.state.items} >pay</button>
+        <button type="button" class="btn btn-outline-primary" isSelected= {this.state.activTab} onClick={this.state.items} >list</button>
+        {/* <h1>Sabrina</h1> */}
       </div>
 
     )

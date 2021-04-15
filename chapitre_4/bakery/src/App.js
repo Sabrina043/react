@@ -15,7 +15,9 @@ class App extends React.Component {
 
     this.state = {
 
-      activeTab: "add", 
+      activeTab: "Add", 
+      activeTab: "Pay" ,
+      activeTab: "list",
       items: []
 
     }
@@ -25,12 +27,12 @@ class App extends React.Component {
   render() {
 
     
-
     return (
       <div>
-        <Button></Button>
-        <Button></Button>
-        <Button></Button>
+        <Button children= {Add} isSelected= {activeTab} onClick={3} ></Button>
+        <Button children= {List} isSelected= {activeTab} onClick={} ></Button>
+        <Button children= {Pay} isSelected= {activeTab} onClick={} ></Button>
+        
       </div>
 
     )

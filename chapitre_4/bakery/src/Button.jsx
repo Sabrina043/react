@@ -5,27 +5,28 @@ import './App.css';
 
 class Button extends React.Component {
 
-//   constructor() {
-//     super()
+  //   constructor() {
+  //     super()
 
-//     this.state = {
+  //     this.state = {
 
-//       activeTab: "add", 
-//       items: []
+  //       activeTab: "add", 
+  //       items: []
 
-//     }
+  //     }
 
-//   }
+  //   }
 
   render() {
 
-    this.props.isSelected
-    this.props.onClick
-    this.props.children
+
 
     return (
-      <div className = {Button}>
-
+      <div className={Button}>
+        
+        <Button style = {this.props.isSelected} onClick= {this.props.onClick} children= {this.props.children}/>
+        
+       
 
 
 

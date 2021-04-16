@@ -28,11 +28,11 @@ class App extends React.Component {
 
 
 
-
   selectAdd() {
 
     this.setState({
-      activeTab: "add"
+
+      activeTab: "Add"
     })
 
     this.selectAdd ()
@@ -40,7 +40,7 @@ class App extends React.Component {
   }
 
 
-  selectList() {
+  selectList(e) {
 
 
     this.setState({
@@ -52,7 +52,7 @@ class App extends React.Component {
     this.selectList()
   }
 
-  selectPay() {
+  selectPay(e) {
 
 
     this.setState({
@@ -74,9 +74,14 @@ class App extends React.Component {
 
         <h1>Bakery</h1>
 
-        <button type="button" class="btn btn-outline-primary" isSelected={this.state.activTab} onClick={this.selectAdd} >Add</button>
-        <button type="button" class="btn btn-outline-primary" isSelected={this.state.activTab} onClick={this.selectPay} >Pay</button>
-        <button type="button" class="btn btn-outline-primary" isSelected={this.state.activTab} onClick={this.selectList} >List</button>
+        <button type="button" class="btn btn-outline-primary" isSelected={this.state.activTab} 
+        onClick={this.selectAdd} >Add</button>
+
+        <button type="button" class="btn btn-outline-primary" isSelected={this.state.activTab}
+         onClick={this.selectPay} >Pay</button>
+
+        <button type="button" class="btn btn-outline-primary" isSelected={this.state.activTab}
+         onClick={this.selectList} >List</button>
         {/* <h1>Sabrina</h1> */}
       </div>
 

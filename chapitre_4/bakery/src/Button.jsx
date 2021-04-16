@@ -21,10 +21,13 @@ class Button extends React.Component {
 
 
 
+
     return (
       <div>
         
-        
+        <button onSelect={this.props.isSelected}  {this.props.children} {this.props.onClick}/>
+
+
        
 
 

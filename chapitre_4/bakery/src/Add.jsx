@@ -20,7 +20,7 @@ class Add extends React.Component {
   render() {
 
     return (
-      <div className={Add}>
+      <div>
 
       </div>
 

@@ -21,7 +21,7 @@ class Pay extends React.Component {
 
     return (
 
-      <div className = {Pay}>
+      <div>
 
       </div>
 

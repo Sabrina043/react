@@ -15,34 +15,92 @@ class App extends React.Component {
 
     this.state = {
 
-      activeTab: "Add", 
+      activeTab: "Add",
       items: []
 
     }
 
+    this.selectAdd = this.selectAdd.bind(this)
+    this.selectList=this.selectList.bind(this)
+    this.selectPay=this.selectPay.bind(this)
+
   }
+
+
+
+
+  selectAdd() {
+
+    this.setState({
+      activeTab: "add"
+    })
+
+    this.selectAdd ()
+
+  }
+
+
+  selectList() {
+
+
+    this.setState({
+
+      activeTab: "list"
+
+    })
+
+    this.selectList()
+  }
+
+  selectPay() {
+
+
+    this.setState({
+
+      activeTab: "pay"
+
+    })
+
+    this.selectPay()
+  };
+
+  
 
   render() {
 
-    
+
     return (
       <div>
-        <button type="button" class="btn btn-outline-primary" isSelected= {this.state.activTab} onClick={this.state.items} >add</button>
-        <button type="button" class="btn btn-outline-primary" isSelected= {this.state.activTab} onClick={this.state.items} >pay</button>
-        <button type="button" class="btn btn-outline-primary" isSelected= {this.state.activTab} onClick={this.state.items} >list</button>
+
+        <h1>Bakery</h1>
+
+        <button type="button" class="btn btn-outline-primary" isSelected={this.state.activTab} onClick={this.selectAdd} >Add</button>
+        <button type="button" class="btn btn-outline-primary" isSelected={this.state.activTab} onClick={this.selectPay} >Pay</button>
+        <button type="button" class="btn btn-outline-primary" isSelected={this.state.activTab} onClick={this.selectList} >List</button>
         {/* <h1>Sabrina</h1> */}
       </div>
 
     )
 
 
-
   }
 
+  
+} export default App
 
 
 
 
 
 
-} export default App;
+
+
+
+
+
+
+
+
+
+
+

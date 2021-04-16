@@ -19,13 +19,13 @@ class Button extends React.Component {
 
   render() {
 
-
+    const {isSelected, onClick, children} = this.props
 
 
     return (
       <div>
         
-        <button onSelect={this.props.isSelected}  {this.props.children} {this.props.onClick}/>
+        <button isSelected={isSelected} onClick= {onClick}>{children}</button>
 
 
        

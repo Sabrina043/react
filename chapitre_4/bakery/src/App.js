@@ -21,8 +21,8 @@ class App extends React.Component {
     }
 
     this.selectAdd = this.selectAdd.bind(this)
-    this.selectList=this.selectList.bind(this)
-    this.selectPay=this.selectPay.bind(this)
+    this.selectList = this.selectList.bind(this)
+    this.selectPay = this.selectPay.bind(this)
 
   }
 
@@ -32,15 +32,15 @@ class App extends React.Component {
 
     this.setState({
 
-      activeTab: "Add"
+      activeTab: "add"
     })
 
-    this.selectAdd ()
+    this.selectAdd()
 
   }
 
 
-  selectList(e) {
+  selectList() {
 
 
     this.setState({
@@ -52,7 +52,7 @@ class App extends React.Component {
     this.selectList()
   }
 
-  selectPay(e) {
+  selectPay() {
 
 
     this.setState({
@@ -64,7 +64,41 @@ class App extends React.Component {
     this.selectPay()
   };
 
-  
+  renderPay() {
+
+    return (
+
+      <div>
+        <button> renderPay.onClick: {this.selectPay}</button>
+      </div>
+
+    )
+
+
+  }
+
+  renderList() {
+
+    return (
+      <div>
+        <button> renderList.onClick: {this.selectList}</button>
+      </div>
+    )
+
+  }
+
+
+  renderAdd() {
+
+    return (
+
+      <div>
+        <button> renderAdd.onClick: {this.selectAdd}</button>
+      </div>
+
+    )
+
+  }
 
   render() {
 
@@ -74,14 +108,14 @@ class App extends React.Component {
 
         <h1>Bakery</h1>
 
-        <button type="button" class="btn btn-outline-primary" isSelected={this.state.activTab} 
-        onClick={this.selectAdd} >Add</button>
+        <button type="button" class="btn btn-outline-primary" isSelected={this.state.activTab}
+          onClick={this.selectAdd} >Add</button>
 
         <button type="button" class="btn btn-outline-primary" isSelected={this.state.activTab}
-         onClick={this.selectPay} >Pay</button>
+          onClick={this.selectPay} >Pay</button>
 
         <button type="button" class="btn btn-outline-primary" isSelected={this.state.activTab}
-         onClick={this.selectList} >List</button>
+          onClick={this.selectList} >List</button>
         {/* <h1>Sabrina</h1> */}
       </div>
 
@@ -90,7 +124,7 @@ class App extends React.Component {
 
   }
 
-  
+
 } export default App
 
 

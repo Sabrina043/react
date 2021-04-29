@@ -1,6 +1,8 @@
 import React from "react"
 import Button from './Button'
 import './App.css';
+import Card from "./Card"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -62,25 +64,25 @@ class App extends React.Component {
 
   renderButton() {
     return (
-      <div>
-        <Button clickButton={() => this.getCountry('france')} children='france'></Button>
-        <Button clickButton={()=>this.getCountry('brazil')} children='brazil'></Button>
-        <Button clickButton={()=>this.getCountry('croatia')} children='croatia'></Button>
+      <div >
+        <Button type="button" class="btn btn-outline-primary" clickButton={() => this.getCountry('france')} children='france'></Button>
+        <Button clickButton={() => this.getCountry('brazil')} children='brazil'></Button>
+        <Button clickButton={() => this.getCountry('croatia')} children='croatia'></Button>
       </div>
     )
   }
-  
+
   render() {
     return (
       <div>
-      {this.renderButton()}
-      <div className="container">
-        <img src={this.state.flag} alt='' />
-        <p>name: {this.state.name}</p>
-        <p>capital: {this.state.capital}</p>
-        <p>population: {this.state.population}</p>
-        <p>region: {this.state.region}</p>
-      </div>
+        {this.renderButton()}
+        <div className="container">
+
+          <Card flag={this.state.flag} name={this.state.name}
+            capital={this.state.capital} population={this.state.population} 
+            region={this.state.region}></Card>
+
+        </div>
       </div>
 
     )

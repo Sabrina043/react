@@ -34,15 +34,13 @@ img{
 }
 
 .container{
-  margin: 100px;
+  
   padding: 50px;
   display: flex;
   border: 3px solid blue;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width:  400px;
-  height: 500px;
   color: white;
   background: black;
   font-size: 25px;

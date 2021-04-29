@@ -9,8 +9,10 @@ class Button extends React.Component {
 
     return (
 
-      <div className >
-          <button></button>
+      <div className = "buttonPays" >
+
+          <button onClick={this.props.clickButton}>{this.props.children}</button>
+          
       </div>
 
     )

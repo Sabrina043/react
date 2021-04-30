@@ -1,44 +1,29 @@
-import React from "react"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import React, { Component } from 'react'
 
+class Button extends Component {
+    
+    render() {
+        return (
+            <button
+                onClick={this.props.onClick} 
+                className={this.props.isSelected === true?  "btn btn-primary" : "btn btn-light"}
+                type="button">
+                    {this.props.children}
+            </button>
+        )
+    }
+}
 
-class Button extends React.Component {
-
-  //   constructor() {
-  //     super()
-
-  //     this.state = {
-
-  //       activeTab: "add", 
-  //       items: []
-
-  //     }
-
-  //   }
-
-  render() {
-
-    const {isSelected, onClick, children} = this.props
-
-
-    return (
-      <div>
-        
-        <button isSelected={isSelected} onClick= {onClick}>{children}</button>
-
-
-       
+export default Button
 
 
 
-      </div>
-
-    )
 
 
 
-  }
 
 
-} export default Button;
+
+
+
+

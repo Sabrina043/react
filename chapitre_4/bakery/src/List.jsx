@@ -1,35 +1,19 @@
-import React from "react"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import React, { Component } from 'react'
 
-
-class List extends React.Component {
-
-//   constructor() {
-//     super()
-
-//     this.state = {
-
-//       activeTab: "add", 
-//       items: []
-
-//     }
-
-//   }
-
-  render() {
-
-    return (
-      <div>
-
-      </div>
-
-    )
+class List extends Component {
+    render() {
+        return (
+            <ul>
+                {this.props.listItems.map(curr => {
+                    return ( <li>{curr.name} - {curr.price} </li>)
+                })}
+            </ul>
+        )
+    }
+}
+export default List
 
 
 
-  }
 
 
-
-} export default List;

@@ -4,6 +4,7 @@ import Button from './Button';
 import Add from './Add';
 import List from './List';
 import Pay from './Pay';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 class App extends React.Component {
 

@@ -18,7 +18,8 @@ class Card extends React.Component {
             <div>
                 <span productName={this.props.productName} price={this.props.price}
                     onClick={this.props.onClick}></span>
-                    <button onClick={this.props.onClick(productName, price)}>{this.state.images}</button>
+                    <button onClick={this.props.onClick(productName, price)}> <img src={this.state.images} alt=""/></button>
+
 
             </div>
 

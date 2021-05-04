@@ -30,22 +30,16 @@ class Pay extends Component {
         return (
             <div>
 
+
                 <p>{this.props.items}</p>
 
-                {/* const listItems = ["muffin", "pain au chocolat", "croissant"] */}
+                <div>
+                    
+                    {/* {this.props.items.map() => (){ */}
 
-                const newList = listItems.map((elem) => {
-                return fetch("mettre un lien... ou est-il??" + elem)
-                .then(response => response.json())
-                .then(dataCountry => datalistItems[0].name)
-                .catch(err => console.error("fetch error", err))
-})
 
-console.log("my array Promises is: ", arrayPromises);
-
-Promise.all(arrayPromises)
-    .then(res => console.log("result final", res))
-    .catch(err => console.error("Promise all error", err))
+                    {/* } */}
+                </div>
 
                 <div>
 

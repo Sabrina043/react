@@ -1,18 +1,36 @@
 import './App.css';
 import React from 'react'
-import {BrowserRouter, Route, Link, Switch} from "react-router-dom"
-import Home from './component/Home' 
-import Contact from './component/Contact' 
-import About from './component/About' 
-import error_404 from './component/error_404'
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
+import Listmovies from './component/Listmovies.json'
+import Home from './component/Home'
+import About from './component/About'
+import PageNotFound from './component/PageNotFound'
 
 
 
 
-class App extends React.Component{
+class App extends React.Component {
 
-    render(){
-        return(
+    constructor() {
+        super()
+
+        this.state = {
+
+            id: "",
+            title: "",
+            director: "",
+            stars: "",
+            image: "",
+            description: "",
+        }   
+
+    }
+
+
+
+    render() {
+
+        return (
 
             <div>
 
@@ -21,16 +39,24 @@ class App extends React.Component{
                     <nav>
 
                         <ul>
-                            <li><link to = "/"/>Home</li>
-                            <li><link to = "/about"/>About</li>
-                            <li><link to = "/Contact"/>Contact</li>
+
+                            <li><Link to="/" />Home</li>
+                            <li><Link to="/about" />About</li>
 
                         </ul>
+
                     </nav>
-                    
+
+                    <Switch>
+                        <Route exact path="/" component={Home} movies={this.state.id}></Route>
+                        <Route path="/About" component={About}  ></Route>
+                        <Route path="/PageNotFound" component={PageNotFound} ></Route>
+                    </Switch>
 
                 </BrowserRouter>
-                
+
+
+
             </div>
         )
     }

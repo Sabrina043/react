@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { BrowserRouter, Link, Switch, Route } from 'react-router-dom'
 
@@ -8,6 +7,7 @@ import WeeklyBattle from './Components/WeeklyBattle'
 import Popular from './Components/Popular'
 import PopularBattle from './Components/PopularBattle'
 import Favorites from './Components/Favorites'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 class App extends Component {
     render() {

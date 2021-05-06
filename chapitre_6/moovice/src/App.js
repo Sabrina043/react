@@ -1,78 +1,41 @@
+
 import React, { Component } from 'react';
-import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Favorites from './Components/Favorites'
+import { BrowserRouter, Link, Switch, Route } from 'react-router-dom'
+
 import Home from './Components/Home'
 import Weekly from './Components/Weekly'
 import WeeklyBattle from './Components/WeeklyBattle'
 import Popular from './Components/Popular'
 import PopularBattle from './Components/PopularBattle'
+import Favorites from './Components/Favorites'
 
 class App extends Component {
+    render() {
+        return (
+            <BrowserRouter>
 
-
-  getMovie() {
-    componentDidMount() {
-
-      const API_Key =  'e441f8a3a151d588a4932d2c5d310769',
-
-      fetch("https://api.themoviedb.org/3/movie/550?api_key=")
-        .then(res => res.json())
-        .then(result => {
-        })
-        // console.log(fetch);
-        .catch(error => console.error(error));
+                <nav>
+                    <ul>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/weekly">Weekly</Link></li>
+                        <li><Link to="/weekly-battle">Weekly Battle</Link></li>
+                        <li><Link to="/popular">Popular</Link></li>
+                        <li><Link to="/popular-battle">Popular Battle</Link></li>
+                        <li><Link to="/favorites">Favorites</Link></li>
+                    </ul>
+                </nav>
+                
+                <Switch>
+                    <Route exact path="/" component={Home}/>
+                    <Route exact path="/weekly" component={Weekly}/>
+                    <Route exact path="/weekly-battle" component={WeeklyBattle}/>
+                    <Route exact path="/popular" component={Popular}/>
+                    <Route exact path="/popular-battle" component={PopularBattle}/>
+                    <Route exact path="/favorites" component={Favorites}/>
+                </Switch>
+            </BrowserRouter>
+        );
     }
-  }
-
-  render() {
-
-
-
-    return (
-
-      <div>
-
-        <h1>Je suis dans App</h1>
-
-        <BrowserRouter>
-          <nav>
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/Popular">Popular</Link></li>
-              <li><Link to="/PopularBattle">PopularBattle</Link></li>
-              <li><Link to="/Weekly">Weekly</Link></li>
-              <li><Link to="/WeeklyBattle">WeeklyBattle</Link></li>
-              <li><Link to="/Favorite">Favorites</Link></li>
-            </ul>
-
-          </nav>
-
-
-          <Switch>
-
-            <Route></Route>
-            <Route></Route>
-            <Route></Route>
-            <Route></Route>
-            <Route></Route>
-            <Route></Route>
-
-          </Switch>
-
-
-
-        </BrowserRouter>
-
-      </div>
-
-    );
-  }
 }
 
 export default App;
-
-
-
-
-

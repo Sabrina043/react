@@ -9,6 +9,8 @@ import PopularBattle from './Components/PopularBattle'
 import Favorites from './Components/Favorites'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+
+
 class App extends Component {
     render() {
         return (
